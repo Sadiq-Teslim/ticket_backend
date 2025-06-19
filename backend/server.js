@@ -29,7 +29,7 @@ app.post('/api/pay', async (req, res) => {
     metadata: {
       full_name: name
     },
-    callback_url: 'http://localhost:3000/pages/success.html',
+    callback_url: 'https://ticketgenerator-rho.vercel.app/pages/success.html',
   })
 
   try {
