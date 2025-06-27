@@ -55,8 +55,8 @@ app.post('/api/paystack-webhook', express.raw({ type: 'application/json' }), asy
             .composite([{
               input: qrCodeBuffer,
               // IMPORTANT: You MUST adjust these values to position the QR code correctly on your ticket image
-              top: 450,
-              left: 150
+              top: 100,
+              left: 650
             }])
             .png()
             .toBuffer();
@@ -118,7 +118,7 @@ app.post('/api/pay', async (req, res) => {
   const { email, name, amount, cart } = req.body;
 
   if (!email || !name || !amount || !cart || cart.length === 0) {
-    return res.status(400).json({ message: 'Email, name, amount, and cart are required.' });
+    return res.status(400).json({ message: 'Email, name, amount, and cart are all required. One or more of them are missing' });
   }
 
   const params = JSON.stringify({
