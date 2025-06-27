@@ -65,7 +65,7 @@ app.post('/api/paystack-webhook', express.raw({ type: 'application/json' }), asy
           sgMail.setApiKey(process.env.SENDGRID_API_KEY);
           const msg = {
             to: customer.email,
-            from: 'sadiqadetola08@gmail.com', // MUST be your verified SendGrid sender email
+            from: 'ayomikunadetola08@gmail.com', // MUST be your verified SendGrid sender email
             subject: `Your ULES Dinner Ticket: ${item.name}`,
             html: `
                             <h1>Thank You, ${metadata.full_name}!</h1>
