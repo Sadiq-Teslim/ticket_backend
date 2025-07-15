@@ -125,7 +125,7 @@ app.post('/api/pay', async (req, res) => {
 
   const params = JSON.stringify({
     email, amount, metadata: { full_name: name, cart },
-    callback_url: 'https://ticketgenerator-rho.vercel.app/pages/success.html',
+    callback_url: 'https://ulesdinner.netlify.app/pages/success.html',
   });
 
   try {
